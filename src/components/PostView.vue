@@ -6,6 +6,7 @@
                     <p :title="post.created_at | moment('dddd, MMMM Do YYYY, h:mm:ss a')">
                         {{ post.created_at | moment("from") }}
                     </p>
+                    <p>By {{post.user.name}}</p>
             </div>
             <div class="card-body">
                 <div class="card-text">{{ post.content }}</div>

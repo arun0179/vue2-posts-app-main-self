@@ -1,4 +1,5 @@
 import AuthenService from '@/services/AuthenService'
+// import UserService from '@/services/UserService'
 import router from '@/router'
 
 const user = JSON.parse(localStorage.getItem('user'))
@@ -37,6 +38,9 @@ const actions = {
     AuthenService.validate_authorize(code)
         .then(user => {
             
+            // UserService.profile()
+            // .then(user_profile =>{})
+
             commit('loginSuccess', {user, profile: 'a'})
             router.push({ name: 'posts' })
         })

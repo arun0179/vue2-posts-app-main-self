@@ -22,7 +22,7 @@ class PostsDataService {
     }
 
     find(title) {
-        return title
+        return http.get(`/posts/search/${title}`)
     }
 
 }

@@ -71,8 +71,8 @@ export default {
         retrievePosts() {
             PostsDataService.getAll()
                 .then(response => {
-                    this.posts = response.data
-                    console.log(response.data)
+                    this.posts = response.data.data
+                    console.log(response.data.data)
                 })
                 .catch(e => {
                     console.log(e.message)
@@ -84,7 +84,6 @@ export default {
             this.currentPost = null;
             this.currentIndex = -1;
         },
-
         setActivePost(post, index) {
             this.currentPost = post;
             this.currentIndex = index;
